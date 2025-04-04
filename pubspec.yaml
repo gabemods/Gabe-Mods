@@ -14,7 +14,7 @@ dependencies:
   shared_preferences: ^2.5.3  # Stores small data locally
   url_launcher: ^6.3.1  # Opens links within the app
   path_provider: ^2.1.2  # Access device file paths
-  material_color_utilities: ^0.12.0  # Updated UI color utilities
+  material_color_utilities: ^0.11.1  # Fixed version to match flutter_test
   meta: ^1.16.0  # Essential metadata handling
 
 dev_dependencies:
