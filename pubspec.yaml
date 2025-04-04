@@ -1,12 +1,18 @@
 name: my_app
 description: My Flutter App
 version: 1.0.0+1
+publish_to: "none" # Prevents accidental publishing to pub.dev
+
 environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.0.5  # Updated state management package
+  http: ^0.13.5     # For API requests
+  shared_preferences: ^2.2.0  # For storing small data locally
+  url_launcher: ^6.2.4  # Opens links within the app
 
 dev_dependencies:
   flutter_test:
