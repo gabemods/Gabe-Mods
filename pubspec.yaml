@@ -1,7 +1,7 @@
 name: my_app
 description: My Flutter App
 version: 1.0.0+1
-publish_to: "none" # Prevents accidental publishing to pub.dev
+publish_to: "none"  # Prevents accidental publishing to pub.dev
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -9,10 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.0.5  # Updated state management package
-  http: ^0.13.5     # For API requests
-  shared_preferences: ^2.2.0  # For storing small data locally
-  url_launcher: ^6.2.4  # Opens links within the app
+  provider: ^6.1.4  # Latest version
+  http: ^0.13.5  # Handles API requests
+  shared_preferences: ^2.5.3  # Stores small data locally
+  url_launcher: ^6.3.1  # Opens links within the app
+  path_provider: ^2.1.2  # Access device file paths
+  material_color_utilities: ^0.12.0  # Updated UI color utilities
+  meta: ^1.16.0  # Essential metadata handling
 
 dev_dependencies:
   flutter_test:
