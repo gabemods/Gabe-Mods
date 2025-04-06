@@ -3,26 +3,23 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 15px;
-    background-color: #000000; /* Default Dark Mode background */
-    color: #ffffff; /* Default Dark Mode text */
+    background-color: #000000; /* Dark Mode */
+    color: #ffffff;
 }
 
 /* Light Mode Styling */
 .light-mode {
-    background-color: #ffffff; /* Light Mode background */
-    color: #000000; /* Light Mode text */
-}
-
-.light-mode header {
     background-color: #ffffff;
+    color: #000000;
 }
 
+.light-mode header,
 .light-mode footer {
     background-color: #ffffff;
     color: #000000;
 }
 
-/* Header Styling */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -32,96 +29,24 @@ header {
     border-bottom: 2px solid #3498db; /* Restored Blue Line */
 }
 
-/* Logo Styling */
-.logo-container {
-    position: relative;
-}
-
+/* Logo */
 .logo-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #3498db;
-    display: block;
 }
 
-/* Fix: Remove Logo Duplication */
-.logo-container::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #3498db;
-    position: absolute;
-    bottom: -5px;
-}
-
-/* Bottom Navigation Bar */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark mode translucent */
-    backdrop-filter: blur(15px);
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    height: 60px;
-    z-index: 1000;
-}
-
-.light-mode .bottom-nav {
-    background: rgba(255, 255, 255, 0.75); /* Light mode translucent */
-}
-
-/* Stack Icons and Names */
-.bottom-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    gap: 3px;
-}
-
-.light-mode .bottom-nav a {
-    color: black;
-}
-
-.bottom-nav img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Three-Dots Menu */
-.three-dots-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
+/* Navigation Menu */
+.menu-button {
+    background: none;
     border: none;
-    background: transparent;
-    transition: transform 0.3s ease-in-out;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.three-dots-menu:hover {
-    transform: rotate(90deg);
-}
-
-.three-dots-menu::before {
-    content: '⋮';
-    color: white; /* Dark mode */
-}
-
-.light-mode .three-dots-menu::before {
-    color: black; /* Light mode */
-}
-
-/* Three-Dots Dropdown Menu */
+/* Hamburger Menu */
 .menu {
     position: absolute;
     top: 60px;
@@ -131,19 +56,10 @@ header {
     padding: 10px;
     border-radius: 10px;
     display: none;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(-10px);
 }
 
 .light-mode .menu {
     background: rgba(255, 255, 255, 0.75);
-}
-
-.menu.visible {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .menu ul {
@@ -164,30 +80,11 @@ header {
     color: black;
 }
 
-/* Fix: Theme Button Styling */
-.theme-btn {
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.theme-btn:hover {
-    background-color: #1d7bc0;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.light-mode .theme-btn {
-    background-color: black;
-    color: white;
-}
-
-.light-mode .theme-btn:hover {
-    background-color: #333;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    font-size: 14px;
 }
