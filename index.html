@@ -18,7 +18,7 @@
     <div class="logo">
       <img src="IMG_7790.png" alt="Gabe Mods Logo" class="logo-image">
     </div>
-    <button class="menu-button" id="menu-button">⋮</button>
+    <button class="three-dots-menu" id="menu-button">⋮</button>
     <nav class="menu" id="menu">
       <ul>
         <li><a href="contact.html">Contact</a></li>
@@ -27,13 +27,13 @@
     </nav>
   </header>
 
-  <!-- Bottom Navigation Bar -->
+  <!-- Bottom Navigation Bar (Text-Only, Compact, No Icons) -->
   <nav class="bottom-nav">
-    <a href="index.html"><img src="icons/IMG_9926.png" alt="Home"> Home</a>
-    <a href="mods.html"><img src="icons/IMG_9927.jpeg" alt="Mods"> Mods</a>
-    <a href="games.html"><img src="icons/IMG_9928.jpeg" alt="Games"> Games</a>
-    <a href="learn-to-code.html"><img src="icons/IMG_9929.jpeg" alt="Learn to Code"> Learn to Code</a>
-</nav>
+    <a href="index.html">Home</a>
+    <a href="mods.html">Mods</a>
+    <a href="games.html">Games</a>
+    <a href="learn-to-code.html">Learn to Code</a>
+  </nav>
 
   <!-- Main Content -->
   <section id="home">
@@ -52,7 +52,7 @@
     <p>&copy; 2025 Gabe Mods | All Rights Reserved</p>
   </footer>
 
-  <!-- JavaScript to Toggle Menu -->
+  <!-- JavaScript to Toggle Three-Dot Menu -->
   <script>
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
@@ -72,7 +72,7 @@
     }
   </script>
 
-  <!-- Add Barba.js JavaScript -->
+  <!-- Barba.js Page Transition Effects -->
   <script>
     barba.init({
       transitions: [{
