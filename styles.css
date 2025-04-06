@@ -38,10 +38,17 @@ body {
 
 /* Updated Bottom Navigation Bar (Translucent) */
 .bottom-nav {
+    position: fixed;
+    bottom: 0; /* Forces it to stay at the bottom */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
-    align-items: center;
     padding: 10px;
+    height: 50px;
+    z-index: 100;
 }
 
 .bottom-nav a {
