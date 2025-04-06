@@ -32,7 +32,7 @@ header {
     border: 3px solid #3498db;
 }
 
-/* Three-Dots Menu */
+/* Three-Dots Menu Animation */
 .three-dots-menu {
     position: absolute;
     top: 20px;
@@ -91,7 +91,7 @@ header {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark mode translucent */
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
@@ -101,7 +101,7 @@ header {
 }
 
 .light-mode .bottom-nav {
-    background: rgba(255, 255, 255, 0.75); /* Light mode translucent */
+    background: rgba(255, 255, 255, 0.75);
 }
 
 /* Navigation Text Centered */
@@ -110,7 +110,7 @@ header {
     font-size: 14px;
     font-weight: bold;
     color: white;
-    text-align: center; /* Centering text */
+    text-align: center;
 }
 
 .light-mode .bottom-nav a {
@@ -125,6 +125,22 @@ header {
 
 .light-mode .bottom-nav a {
     background: none;
+}
+
+/* Restored Theme Button */
+.theme-toggle {
+    font-size: 16px;
+    padding: 12px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #1d7bc0;
 }
 
 /* Footer */
