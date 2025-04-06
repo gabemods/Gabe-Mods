@@ -22,20 +22,6 @@ body {
     color: #000000;
 }
 
-/* Light Mode Menu: Translucent Effect */
-.light-mode .menu {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(15px);
-}
-
-.light-mode .menu a {
-    color: black;
-}
-
-.light-mode .menu a:hover {
-    color: #3498db;
-}
-
 /* Header Styling */
 header {
     display: flex;
@@ -113,17 +99,67 @@ header {
 /* Three-Dots Menu */
 .three-dots-menu {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
     font-size: 24px;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.three-dots-menu:hover {
+    transform: rotate(90deg);
 }
 
 .three-dots-menu::before {
     content: '⋮';
-    color: white;
+    color: white; /* Default for dark mode */
 }
 
 .light-mode .three-dots-menu::before {
+    color: black; /* Light mode color */
+}
+
+/* Three-Dots Dropdown Menu */
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.light-mode .menu {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.menu.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.light-mode .menu a {
     color: black;
 }
