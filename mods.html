@@ -6,10 +6,6 @@
   <title>Mods</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Barba.js & GSAP -->
-  <script src="https://unpkg.com/@barba/core"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
@@ -18,11 +14,7 @@
     <div class="logo">
       <img src="IMG_7790.png" alt="Gabe Mods Logo" class="logo-image">
     </div>
-    <button class="three-dots-menu" id="menu-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <button class="three-dots-menu" id="menu-button">⋮</button>
     <nav class="menu" id="menu">
       <ul>
         <li><a href="contact.html">Contact</a></li>
@@ -31,7 +23,7 @@
     </nav>
   </header>
 
-  <!-- Bottom Navigation Bar (Centered Text, No Button-Like Backgrounds) -->
+  <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav">
     <a href="index.html">Home</a>
     <a href="mods.html">Mods</a>
@@ -65,7 +57,7 @@
         <li><a href="https://t.me/GabeMods_CommunityModsAPKs" target="_blank">xManager (Spotify Mod)</a></li>
         <li><a href="https://t.me/GabeMods_CommunityModsAPKs" target="_blank">AyuGram (Telegram Client)</a></li>
     </ul>
-</section>
+  </section>
   
   <!-- ✅ Updated "iOS Mods" Section -->
   <section id="ios-mods">
@@ -75,11 +67,11 @@
     <div class="ios-mod-buttons">
       <a href="https://altstore.io" target="_blank" class="altstore-btn">
         <img src="IMG_9865.jpeg" alt="AltStore Logo" class="button-logo">
-        AltStore
+        Install via AltStore
       </a>
       <a href="https://sidestore.io" target="_blank" class="sidestore-btn">
         <img src="IMG_9866.jpeg" alt="SideStore Logo" class="button-logo">
-        SideStore
+        Install via SideStore
       </a>
     </div>
   </section>
@@ -89,7 +81,7 @@
     <p>&copy; 2025 Gabe Mods | All Rights Reserved</p>
   </footer>
 
-  <!-- JavaScript to Toggle Three-Dot Menu -->
+  <!-- JavaScript for Three-Dot Menu -->
   <script>
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
@@ -111,19 +103,5 @@
     }
   </script>
 
-  <!-- Barba.js for Smooth Page Transitions -->
-  <script>
-    barba.init({
-      transitions: [{
-        name: 'fade',
-        leave(data) {
-          return gsap.to(data.current.container, { opacity: 0, duration: 0.5 });
-        },
-        enter(data) {
-          return gsap.from(data.next.container, { opacity: 0, duration: 0.5 });
-        }
-      }]
-    });
-  </script>
 </body>
 </html>
