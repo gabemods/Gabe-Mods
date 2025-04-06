@@ -112,7 +112,7 @@ header {
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
-    padding: 12px;
+    padding: 10px;
     height: 50px;
     z-index: 1000;
 }
@@ -133,28 +133,48 @@ header {
     color: black;
 }
 
-/* Fix: Mods Page Buttons */
-.mods-page-buttons {
+/* Fix: AltStore & SideStore Buttons */
+.ios-mod-buttons {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.mods-page-buttons button {
+.altstore-btn, .sidestore-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 220px;
+    padding: 10px;
     font-size: 16px;
-    padding: 12px;
-    background: #3498db;
-    border: none;
+    font-weight: bold;
     color: white;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s;
+    border-radius: 10px;
+    text-decoration: none;
+    justify-content: left;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.mods-page-buttons button:hover {
-    background: #1d7bc0;
+/* Restored AltStore Button */
+.altstore-btn {
+    background: linear-gradient(90deg, #00A2FF, #00FF7F);
 }
 
-/* Fix: Contact Page Buttons */
+.altstore-btn:hover {
+    background: linear-gradient(90deg, #008CFF, #00D973);
+}
+
+/* Restored SideStore Button */
+.sidestore-btn {
+    background: linear-gradient(90deg, #8000FF, #0703FC);
+}
+
+.sidestore-btn:hover {
+    background: linear-gradient(90deg, #6A00E0, #0502D3);
+}
+
+/* Contact Page Buttons */
 .contact-page-buttons {
     display: flex;
     flex-direction: column;
