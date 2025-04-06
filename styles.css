@@ -52,10 +52,14 @@ body {
 }
 
 .bottom-nav a {
-    display: flex;
-    flex-direction: column; /* Stack icon and name */
-    align-items: center;
-    font-size: 12px; /* Smaller text */
+    color: white; /* Standard text color */
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.bottom-nav a:hover {
+    color: #3498db; /* Only change color on hover */
 }
 
 .bottom-nav img {
