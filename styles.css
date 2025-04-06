@@ -13,12 +13,6 @@ body {
     color: #000000;
 }
 
-.light-mode header,
-.light-mode footer {
-    background-color: #ffffff;
-    color: #000000;
-}
-
 /* Header */
 header {
     display: flex;
@@ -26,7 +20,7 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #000000;
-    border-bottom: 2px solid #3498db; /* Restored Blue Line */
+    border-bottom: 2px solid #3498db;
 }
 
 /* Logo */
@@ -38,7 +32,7 @@ header {
     border: 3px solid #3498db;
 }
 
-/* Three-Dots Menu */
+/* Three-Dots Menu Animation */
 .three-dots-menu {
     position: absolute;
     top: 20px;
@@ -50,29 +44,37 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+.three-dots-menu.active::before {
+    content: '✖'; /* Turns into an "X" when menu is open */
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
 .three-dots-menu:hover {
     transform: rotate(90deg);
 }
 
 .three-dots-menu::before {
     content: '⋮';
-    color: white; /* Dark mode */
+    color: white;
 }
 
 .light-mode .three-dots-menu::before {
-    color: black; /* Light mode */
+    color: black;
 }
 
-/* Three-Dots Dropdown Menu */
+/* iOS-Style Sliding Menu Animation */
 .menu {
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: -250px; /* Starts off-screen */
+    width: 220px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
-    display: none;
+    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
 }
 
 .light-mode .menu {
@@ -80,27 +82,8 @@ header {
 }
 
 .menu.visible {
-    display: block;
+    right: 20px; /* Slides into view */
     opacity: 1;
-    transform: translateY(0);
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    padding: 8px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.light-mode .menu a {
-    color: black;
 }
 
 /* Bottom Navigation Bar */
@@ -108,7 +91,7 @@ header {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark mode translucent */
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
@@ -118,90 +101,30 @@ header {
 }
 
 .light-mode .bottom-nav {
-    background: rgba(255, 255, 255, 0.75); /* Light mode translucent */
+    background: rgba(255, 255, 255, 0.75);
 }
 
-/* Text-Only Navigation Buttons */
+/* Compact Navigation Buttons */
 .bottom-nav a {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
+    transition: background 0.3s ease-in-out;
 }
 
 .light-mode .bottom-nav a {
     color: black;
+    background: rgba(0, 0, 0, 0.1);
 }
 
-/* Fix: AltStore & SideStore Buttons */
-.ios-mod-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
+.bottom-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.altstore-btn, .sidestore-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 220px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    justify-content: left;
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Restored AltStore Button */
-.altstore-btn {
-    background: linear-gradient(90deg, #00A2FF, #00FF7F);
-}
-
-.altstore-btn:hover {
-    background: linear-gradient(90deg, #008CFF, #00D973);
-}
-
-/* Restored SideStore Button */
-.sidestore-btn {
-    background: linear-gradient(90deg, #8000FF, #0703FC);
-}
-
-.sidestore-btn:hover {
-    background: linear-gradient(90deg, #6A00E0, #0502D3);
-}
-
-/* Contact Page Buttons */
-.contact-page-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-.contact-page-buttons button {
-    font-size: 16px;
-    padding: 12px;
-    background: #3498db;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-.contact-page-buttons button:hover {
-    background: #1d7bc0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #ffffff;
-    font-size: 14px;
+.light-mode .bottom-nav a:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
