@@ -121,3 +121,12 @@ body {
 .light-mode .menu a {
     color: black;
 }
+
+.logo-image {
+    width: 50px; /* Restoring size */
+    height: 50px;
+    border-radius: 50%; /* Making it round */
+    object-fit: cover;
+    border: 3px solid #3498db; /* Adding the blue circle */
+    display: block;
+}
