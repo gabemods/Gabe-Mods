@@ -12,24 +12,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="IMG_7790.png" alt="Gabe Mods Logo" class="logo-image">
-    </div>
-    <div class="menu-icon" id="menu-icon">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </header>
 
-  <!-- Header with Three-Dot Menu -->
+  <!-- Header with Animated Three-Dot Menu -->
   <header>
     <div class="logo">
       <img src="IMG_7790.png" alt="Gabe Mods Logo" class="logo-image">
     </div>
-    <button class="menu-button" id="menu-button">⋮</button>
+    <button class="three-dots-menu" id="menu-button">⋮</button>
     <nav class="menu" id="menu">
       <ul>
         <li><a href="contact.html">Contact</a></li>
@@ -38,13 +27,13 @@
     </nav>
   </header>
 
-  <!-- Bottom Navigation Bar -->
+  <!-- Bottom Navigation Bar (Centered Text) -->
   <nav class="bottom-nav">
-    <a href="index.html"><img src="icons/IMG_9926.png" alt="Home"> Home</a>
-    <a href="mods.html"><img src="icons/IMG_9927.jpeg" alt="Mods"> Mods</a>
-    <a href="games.html"><img src="icons/IMG_9928.jpeg" alt="Games"> Games</a>
-    <a href="learn-to-code.html"><img src="icons/IMG_9929.jpeg" alt="Learn to Code"> Learn to Code</a>
-</nav>
+    <a href="index.html">Home</a>
+    <a href="mods.html">Mods</a>
+    <a href="games.html">Games</a>
+    <a href="learn-to-code.html">Learn to Code</a>
+  </nav>
 
   <!-- Main Content -->
   <section id="home">
@@ -65,7 +54,6 @@
   <section id="community-mods">
     <h2>Community Mods</h2>
     <p>Explore mods created by other users! All downloads are available in our Telegram channel.</p>
-
     <ul>
         <li><a href="https://t.me/GabeMods_CommunityModsAPKs" target="_blank">Subway Surfers Mod</a></li>
         <li><a href="https://t.me/GabeMods_CommunityModsAPKs" target="_blank">Grand Battle Royale Mod</a></li>
@@ -97,28 +85,20 @@
     <p>&copy; 2025 Gabe Mods | All Rights Reserved</p>
   </footer>
 
-  <!-- Existing JavaScript -->
+  <!-- JavaScript to Toggle Three-Dot Menu -->
   <script>
-    const menuIcon = document.getElementById('menu-icon');
+    const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
-    const menuLinks = document.querySelectorAll('.menu ul li a');
 
-    menuIcon.addEventListener('click', () => {
+    menuButton.addEventListener('click', () => {
         menu.classList.toggle('visible');
-        menuIcon.classList.toggle('active');
-    });
-
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('visible');
-            menuIcon.classList.remove('active');
-        });
+        menuButton.classList.toggle('active'); /* Animates ⋮ into X */
     });
 
     document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+        if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
             menu.classList.remove('visible');
-            menuIcon.classList.remove('active');
+            menuButton.classList.remove('active'); /* Resets X to ⋮ */
         }
     });
 
