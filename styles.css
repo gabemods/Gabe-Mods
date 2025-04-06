@@ -32,7 +32,7 @@ header {
     border: 3px solid #3498db;
 }
 
-/* Three-Dots Menu Animation */
+/* Three-Dots Menu */
 .three-dots-menu {
     position: absolute;
     top: 20px;
@@ -86,12 +86,12 @@ header {
     opacity: 1;
 }
 
-/* Bottom Navigation Bar */
+/* Bottom Navigation Bar (Centered Text, No Button-Like Background) */
 .bottom-nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Dark mode translucent */
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
@@ -101,30 +101,37 @@ header {
 }
 
 .light-mode .bottom-nav {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.75); /* Light mode translucent */
 }
 
-/* Compact Navigation Buttons */
+/* Navigation Text Centered */
 .bottom-nav a {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
     color: white;
-    transition: background 0.3s ease-in-out;
+    text-align: center; /* Centering text */
 }
 
 .light-mode .bottom-nav a {
     color: black;
-    background: rgba(0, 0, 0, 0.1);
 }
 
-.bottom-nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+/* Remove Button-Like Appearance */
+.bottom-nav a {
+    background: none;
+    padding: 0;
 }
 
-.light-mode .bottom-nav a:hover {
-    background: rgba(0, 0, 0, 0.2);
+.light-mode .bottom-nav a {
+    background: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    font-size: 14px;
 }
