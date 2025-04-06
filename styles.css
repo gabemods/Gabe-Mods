@@ -45,27 +45,33 @@ body {
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
-    padding: 15px;
-    z-index: 100;
-}
-
-.light-mode .bottom-nav {
-    background: rgba(255, 255, 255, 0.75);
+    padding: 10px; /* Reduced padding for a smaller bar */
+    height: 50px; /* Set a fixed height */
 }
 
 .bottom-nav a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px; /* Slightly smaller text */
     font-weight: bold;
+    display: flex;
+    align-items: center; /* Align icons & text */
+    gap: 8px; /* Space between icon & text */
 }
 
-.light-mode .bottom-nav a {
+.light-mode .bottom-nav {
+    background: rgba(255, 255, 255, 0.75); /* Light mode translucent */
     color: black;
 }
 
-.bottom-nav a:hover {
-    color: #3498db;
+.dark-mode .bottom-nav {
+    background: rgba(0, 0, 0, 0.6); /* Dark mode translucent */
+    color: white;
+}
+
+.bottom-nav img {
+    width: 20px; /* Smaller icons */
+    height: 20px;
 }
 
 /* Three-Dot Menu Button */
