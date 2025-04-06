@@ -38,25 +38,22 @@ body {
 
 /* Updated Bottom Navigation Bar (Translucent) */
 .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
-    padding: 10px; /* Reduced padding for a smaller bar */
-    height: 50px; /* Set a fixed height */
+    align-items: center;
+    padding: 10px;
 }
 
 .bottom-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px; /* Slightly smaller text */
-    font-weight: bold;
     display: flex;
-    align-items: center; /* Align icons & text */
-    gap: 8px; /* Space between icon & text */
+    flex-direction: column; /* Stack icon and name */
+    align-items: center;
+    font-size: 12px; /* Smaller text */
+}
+
+.bottom-nav img {
+    width: 24px; /* Adjusted icon size */
+    height: 24px;
 }
 
 .light-mode .bottom-nav {
@@ -72,6 +69,11 @@ body {
 .bottom-nav img {
     width: 20px; /* Smaller icons */
     height: 20px;
+}
+
+.logo-image {
+    width: 40px; /* Smaller size */
+    height: 40px;
 }
 
 /* Three-Dot Menu Button */
