@@ -27,7 +27,7 @@
     </nav>
   </header>
 
-  <!-- Bottom Navigation Bar (Text-Only, Compact, No Icons) -->
+  <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav">
     <a href="index.html">Home</a>
     <a href="mods.html">Mods</a>
@@ -47,6 +47,26 @@
     </p>
   </section>
 
+  <!-- iOS Mod Buttons -->
+  <section class="ios-mod-buttons">
+    <a href="altstore.html" class="altstore-btn">
+      <img src="icons/altstore-icon.png" class="button-logo"> Install via AltStore
+    </a>
+    <a href="sidestore.html" class="sidestore-btn">
+      <img src="icons/sidestore-icon.png" class="button-logo"> Install via SideStore
+    </a>
+  </section>
+
+  <!-- Contact Page Buttons -->
+  <section class="contact-page-buttons">
+    <a href="mailto:gabemods.website@gmail.com" class="contact-btn email-btn">
+      Email Support
+    </a>
+    <a href="https://t.me/Gabriel_Mods_Chat" target="_blank" class="contact-btn telegram-btn">
+      Telegram Chat
+    </a>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Gabe Mods | All Rights Reserved</p>
@@ -59,11 +79,13 @@
 
     menuButton.addEventListener('click', () => {
         menu.classList.toggle('visible');
+        menuButton.classList.toggle('active'); /* Animates ⋮ into X */
     });
 
     document.addEventListener('click', (event) => {
         if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
             menu.classList.remove('visible');
+            menuButton.classList.remove('active'); /* Resets X to ⋮ */
         }
     });
 
