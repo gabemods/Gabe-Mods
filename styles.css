@@ -46,7 +46,7 @@ header {
     display: block;
 }
 
-/* Blue Line Under Logo */
+/* Fix: Remove Logo Duplication */
 .logo-container::after {
     content: '';
     display: block;
@@ -114,11 +114,11 @@ header {
 
 .three-dots-menu::before {
     content: '⋮';
-    color: white; /* Default for dark mode */
+    color: white; /* Dark mode */
 }
 
 .light-mode .three-dots-menu::before {
-    color: black; /* Light mode color */
+    color: black; /* Light mode */
 }
 
 /* Three-Dots Dropdown Menu */
@@ -162,4 +162,32 @@ header {
 
 .light-mode .menu a {
     color: black;
+}
+
+/* Fix: Theme Button Styling */
+.theme-btn {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.theme-btn:hover {
+    background-color: #1d7bc0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .theme-btn {
+    background-color: black;
+    color: white;
+}
+
+.light-mode .theme-btn:hover {
+    background-color: #333;
 }
