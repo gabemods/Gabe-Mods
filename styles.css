@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 15px;
-    background-color: #000000; /* Dark Mode */
+    background-color: #000000; /* Default Dark Mode */
     color: #ffffff;
 }
 
@@ -38,15 +38,32 @@ header {
     border: 3px solid #3498db;
 }
 
-/* Navigation Menu */
-.menu-button {
-    background: none;
-    border: none;
-    font-size: 24px;
+/* Three-Dots Menu */
+.three-dots-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
+    font-size: 24px;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hamburger Menu */
+.three-dots-menu:hover {
+    transform: rotate(90deg);
+}
+
+.three-dots-menu::before {
+    content: '⋮';
+    color: white; /* Dark mode */
+}
+
+.light-mode .three-dots-menu::before {
+    color: black; /* Light mode */
+}
+
+/* Three-Dots Dropdown Menu */
 .menu {
     position: absolute;
     top: 60px;
@@ -60,6 +77,12 @@ header {
 
 .light-mode .menu {
     background: rgba(255, 255, 255, 0.75);
+}
+
+.menu.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu ul {
@@ -78,6 +101,80 @@ header {
 
 .light-mode .menu a {
     color: black;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark mode translucent */
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.light-mode .bottom-nav {
+    background: rgba(255, 255, 255, 0.75); /* Light mode translucent */
+}
+
+/* Text-Only Navigation Buttons */
+.bottom-nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.light-mode .bottom-nav a {
+    color: black;
+}
+
+/* Fix: Mods Page Buttons */
+.mods-page-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mods-page-buttons button {
+    font-size: 16px;
+    padding: 12px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.mods-page-buttons button:hover {
+    background: #1d7bc0;
+}
+
+/* Fix: Contact Page Buttons */
+.contact-page-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-page-buttons button {
+    font-size: 16px;
+    padding: 12px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.contact-page-buttons button:hover {
+    background: #1d7bc0;
 }
 
 /* Footer */
