@@ -22,69 +22,87 @@ body {
     color: #000000;
 }
 
-/* Light Mode Menu: Translucent Effect on All Devices */
+/* Light Mode Menu: Translucent Effect */
 .light-mode .menu {
-    background: rgba(255, 255, 255, 0.75); /* Keeps the white color but adds translucency */
-    backdrop-filter: blur(15px); /* Ensures consistency across all screens */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
 }
 
 .light-mode .menu a {
-    color: black; /* Black text for Light Mode */
+    color: black;
 }
 
 .light-mode .menu a:hover {
     color: #3498db;
 }
 
-/* Header Styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000000;
-    border-bottom: 1px solid #3498db;
-}
-
-/* Logo Styling */
-.logo-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #3498db;
-    display: block;
-}
-
-/* Fixed Navigation Menu Placement (Translucent for All Devices) */
-.menu {
+/* Updated Bottom Navigation Bar (Translucent) */
+.bottom-nav {
     position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    z-index: 100;
+}
+
+.light-mode .bottom-nav {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.bottom-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.light-mode .bottom-nav a {
+    color: black;
+}
+
+.bottom-nav a:hover {
+    color: #3498db;
+}
+
+/* Three-Dot Menu Button */
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Three-Dot Menu */
+.menu {
+    position: absolute;
+    right: 15px;
     top: 60px;
-    right: -300px; /* Start off-screen */
-    width: 220px;
-    background: rgba(0, 0, 0, 0.6); /* Dark Mode translucent menu */
-    backdrop-filter: blur(15px); /* Ensures it works across all screens */
-    padding: 20px;
-    border-radius: 15px;
-    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
-    display: block; /* Ensure menu is contained */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.light-mode .menu {
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .menu.visible {
-    right: 20px; /* Slide in */
-    opacity: 1; /* Fade in */
+    display: block;
 }
 
-/* Menu Links Styling */
 .menu ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.menu ul li {
-    display: block;
+.menu li {
+    padding: 8px;
 }
 
 .menu a {
@@ -95,179 +113,3 @@ header {
 .light-mode .menu a {
     color: black;
 }
-
-/* Theme Button Styling */
-.theme-btn {
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.theme-btn:hover {
-    background-color: #1d7bc0;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.light-mode .theme-btn {
-    background-color: black;
-    color: white;
-}
-
-.light-mode .theme-btn:hover {
-    background-color: #333;
-}
-
-/* Hamburger Icon Animations */
-.menu-icon {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    position: relative;
-    z-index: 100;
-}
-
-.menu-icon .bar {
-    height: 4px;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-.light-mode .menu-icon .bar {
-    background-color: black;
-}
-
-.menu-icon.active .bar:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.menu-icon.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-icon.active .bar:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #ffffff;
-    font-size: 14px;
-}
-
-/* iOS Mod Buttons Styling */
-.ios-mod-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.altstore-btn, .sidestore-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between logo & text */
-    width: 220px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    justify-content: left; /* Align content to the left */
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* ✅ Updated AltStore Button (Brighter Blue-to-Green Gradient) */
-.altstore-btn {
-    background: linear-gradient(90deg, #2196F3, #43A047); /* Brighter Blue & Green */
-}
-
-.altstore-btn:hover {
-    background: linear-gradient(90deg, #1E88E5, #2E7D32); /* Slightly darker hover gradient */
-}
-
-/* ✅ Updated SideStore Button (Purple to #3434EB Blue Gradient) */
-.sidestore-btn {
-    background: linear-gradient(90deg, #6A0DAD, #3434EB); /* Purple to Blue */
-}
-
-.sidestore-btn:hover {
-    background: linear-gradient(90deg, #4B0082, #2626D1); /* Slightly darker hover gradient */
-}
-
-/* ✅ Rounded Square Button Icons */
-.button-logo {
-    width: 24px; /* Keeps the size unchanged */
-    height: 24px;
-    border-radius: 6px; /* Makes the icons rounded squares */
-    margin-right: 8px; /* Space between logo & text */
-}
-
-/* ✅ AltStore Button (Enhanced Blue-to-Green Gradient) */
-.altstore-btn {
-    background: linear-gradient(90deg, #00A2FF, #00FF7F); /* More vibrant blue & green */
-}
-
-.altstore-btn:hover {
-    background: linear-gradient(90deg, #008CFF, #00D973); /* Slightly darker hover gradient */
-}
-
-/* ✅ SideStore Button (Enhanced Purple-to-#0703FC Gradient) */
-.sidestore-btn {
-    background: linear-gradient(90deg, #8000FF, #0703FC); /* Stronger purple & deep blue */
-}
-
-.sidestore-btn:hover {
-    background: linear-gradient(90deg, #6A00E0, #0502D3); /* Slightly darker hover gradient */
-}
-
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.contact-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px; /* Same padding as AltStore buttons */
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    width: 80%;
-    max-width: 400px;
-    color: #fff;
-    transition: background 0.3s ease;
-}
-
-/* Adjust button colors */
-.snapchat-btn { background: #fffc00; color: #000; }
-.email-btn { background: #FFF; color: #000; }
-.telegram-btn { background: #ffffff; color: #0088cc; border: 2px solid #0088cc; }
-
-/* Make logos the same size as AltStore/SideStore */
-.contact-btn img {
-    width: 40px;  /* Adjust to match the button icons */
-    height: 40px;
-    margin-right: 10px;
-    border-radius: 5px;
-}
-
