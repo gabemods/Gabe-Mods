@@ -292,6 +292,6 @@ footer {
     background: linear-gradient(90deg, #FFFC00, #FFD700);
 }
 
-.snapchat-btn:hover {
+snapchat-btn:hover {
     background: linear-gradient(90deg, #E6E000, #CCB200);
 }
