@@ -213,3 +213,81 @@ footer {
     color: #ffffff;
     font-size: 14px;
 }
+
+/* ✅ Fixes for Three-Dots Menu */
+.three-dots-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Removed the White Box Around Three-Dots */
+.three-dots-menu::before {
+    content: '⋮';
+    color: white;
+    background: none; /* Fix white box issue */
+}
+
+/* ✅ Ensure Menu Names Don't Get Highlighted */
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.menu a:active {
+    background: none; /* Remove highlight when clicked */
+}
+
+/* ✅ Contact Buttons Restored */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    width: 250px;
+    text-align: center;
+}
+
+/* ✅ Styled Contact Buttons */
+.email-btn {
+    background: linear-gradient(45deg, #007AFF, #0056b3);
+}
+
+.telegram-btn {
+    background: linear-gradient(45deg, #00C853, #008e43);
+}
+
+.github-btn {
+    background: linear-gradient(45deg, #6A0DAD, #3434EB);
+}
+
+.email-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #007AFF);
+}
+
+.telegram-btn:hover {
+    background: linear-gradient(45deg, #008e43, #00C853);
+}
+
+.github-btn:hover {
+    background: linear-gradient(45deg, #4B0082, #2626D1);
+}
