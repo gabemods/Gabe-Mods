@@ -121,42 +121,64 @@ header {
     color: black;
 }
 
-/* iOS Mods Button Styling */
-.ios-mod-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.ios-mod-buttons a {
+/* ✅ Added AltStore & SideStore Button Styling */
+.altstore-btn, .sidestore-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 12px 18px;
+    gap: 8px; /* Space between logo & text */
+    width: 220px;
+    padding: 10px;
     font-size: 16px;
     font-weight: bold;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
-    transition: background 0.3s;
-    width: 200px;
+    justify-content: left; /* Align content to the left */
+    transition: background-color 0.3s ease-in-out;
 }
 
+/* ✅ Updated AltStore Button (Brighter Blue-to-Green Gradient) */
 .altstore-btn {
-    background: linear-gradient(45deg, #007AFF, #0056b3);
-}
-
-.sidestore-btn {
-    background: linear-gradient(45deg, #00C853, #008e43);
+    background: linear-gradient(90deg, #2196F3, #43A047); /* Brighter Blue & Green */
 }
 
 .altstore-btn:hover {
-    background: linear-gradient(45deg, #0056b3, #007AFF);
+    background: linear-gradient(90deg, #1E88E5, #2E7D32); /* Slightly darker hover gradient */
+}
+
+/* ✅ Updated SideStore Button (Purple to #3434EB Blue Gradient) */
+.sidestore-btn {
+    background: linear-gradient(90deg, #6A0DAD, #3434EB); /* Purple to Blue */
 }
 
 .sidestore-btn:hover {
-    background: linear-gradient(45deg, #008e43, #00C853);
+    background: linear-gradient(90deg, #4B0082, #2626D1); /* Slightly darker hover gradient */
+}
+
+/* ✅ Rounded Square Button Icons */
+.button-logo {
+    width: 24px; /* Keeps the size unchanged */
+    height: 24px;
+    border-radius: 6px; /* Makes the icons rounded squares */
+    margin-right: 8px; /* Space between logo & text */
+}
+
+/* ✅ AltStore Button (Enhanced Blue-to-Green Gradient) */
+.altstore-btn {
+    background: linear-gradient(90deg, #00A2FF, #00FF7F); /* More vibrant blue & green */
+}
+
+.altstore-btn:hover {
+    background: linear-gradient(90deg, #008CFF, #00D973); /* Slightly darker hover gradient */
+}
+
+/* ✅ SideStore Button (Enhanced Purple-to-#0703FC Gradient) */
+.sidestore-btn {
+    background: linear-gradient(90deg, #8000FF, #0703FC); /* Stronger purple & deep blue */
+}
+
+.sidestore-btn:hover {
+    background: linear-gradient(90deg, #6A00E0, #0502D3); /* Slightly darker hover gradient */
 }
 
 /* Footer */
