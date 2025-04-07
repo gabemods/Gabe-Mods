@@ -121,7 +121,15 @@ header {
     color: black;
 }
 
-/* ✅ Added AltStore & SideStore Button Styling */
+/* ✅ Spaced AltStore & SideStore Buttons */
+.ios-mod-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* Increased spacing between buttons */
+    margin-top: 20px;
+}
+
+/* ✅ Updated iOS Mods Buttons */
 .altstore-btn, .sidestore-btn {
     display: flex;
     align-items: center;
@@ -137,32 +145,48 @@ header {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* ✅ Updated AltStore Button (Brighter Blue-to-Green Gradient) */
-.altstore-btn {
-    background: linear-gradient(90deg, #2196F3, #43A047); /* Brighter Blue & Green */
+/* ✅ Navigation Bar - Compact & Translucent */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Translucent effect */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 8px; /* Reduced padding for compact style */
+    height: 45px; /* Adjusted height for proportionate size */
+    z-index: 1000;
 }
 
-.altstore-btn:hover {
-    background: linear-gradient(90deg, #1E88E5, #2E7D32); /* Slightly darker hover gradient */
+.light-mode .bottom-nav {
+    background: rgba(255, 255, 255, 0.75);
 }
 
-/* ✅ Updated SideStore Button (Purple to #3434EB Blue Gradient) */
-.sidestore-btn {
-    background: linear-gradient(90deg, #6A0DAD, #3434EB); /* Purple to Blue */
+/* ✅ Navigation Text Adjustments */
+.bottom-nav a {
+    text-decoration: none;
+    font-size: 14px; /* Adjusted font size to keep text readable */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sidestore-btn:hover {
-    background: linear-gradient(90deg, #4B0082, #2626D1); /* Slightly darker hover gradient */
+.light-mode .bottom-nav a {
+    color: black;
 }
 
 /* ✅ Rounded Square Button Icons */
 .button-logo {
-    width: 24px; /* Keeps the size unchanged */
+    width: 24px;
     height: 24px;
-    border-radius: 6px; /* Makes the icons rounded squares */
-    margin-right: 8px; /* Space between logo & text */
+    border-radius: 6px;
+    margin-right: 8px;
 }
-
 /* ✅ AltStore Button (Enhanced Blue-to-Green Gradient) */
 .altstore-btn {
     background: linear-gradient(90deg, #00A2FF, #00FF7F); /* More vibrant blue & green */
