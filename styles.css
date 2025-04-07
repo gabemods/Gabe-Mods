@@ -245,49 +245,53 @@ footer {
     background: none; /* Remove highlight when clicked */
 }
 
-/* ✅ Contact Buttons Restored */
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
+/* ✅ Contact Buttons Styling */
 .contact-btn {
-    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo & text */
+    width: 220px;
+    padding: 12px;
     font-size: 16px;
     font-weight: bold;
     color: white;
     border-radius: 8px;
     text-decoration: none;
+    justify-content: left;
     transition: background-color 0.3s ease-in-out;
-    width: 250px;
-    text-align: center;
 }
 
-/* ✅ Styled Contact Buttons */
+/* ✅ Contact Button Icons - FULLY RESTORED */
+.contact-btn img {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* ✅ Updated Email Button */
 .email-btn {
-    background: linear-gradient(45deg, #007AFF, #0056b3);
-}
-
-.telegram-btn {
-    background: linear-gradient(45deg, #00C853, #008e43);
-}
-
-.github-btn {
-    background: linear-gradient(45deg, #6A0DAD, #3434EB);
+    background: linear-gradient(90deg, #FF4500, #FF6347);
 }
 
 .email-btn:hover {
-    background: linear-gradient(45deg, #0056b3, #007AFF);
+    background: linear-gradient(90deg, #E03E00, #D14A32);
+}
+
+/* ✅ Updated Telegram Button */
+.telegram-btn {
+    background: linear-gradient(90deg, #0088CC, #0077B5);
 }
 
 .telegram-btn:hover {
-    background: linear-gradient(45deg, #008e43, #00C853);
+    background: linear-gradient(90deg, #0073A7, #005F8B);
 }
 
-.github-btn:hover {
-    background: linear-gradient(45deg, #4B0082, #2626D1);
+/* ✅ Updated Snapchat Button */
+.snapchat-btn {
+    background: linear-gradient(90deg, #FFFC00, #FFD700);
+}
+
+.snapchat-btn:hover {
+    background: linear-gradient(90deg, #E6E000, #CCB200);
 }
